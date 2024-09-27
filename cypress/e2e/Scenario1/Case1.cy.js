@@ -1,7 +1,10 @@
 describe('API Test Case 1 - Registration completed successfully', () => {
 
     it('Register a product and verify that it was added correctly', () => {
+      const apiUrl = Cypress.env('apiUrl'); 
       
+
+
       const produto = {
         title: "Produto A",
         price: 10,
@@ -10,10 +13,10 @@ describe('API Test Case 1 - Registration completed successfully', () => {
         images: ["https://placeimg.com/640/480/any"]
       };
   
-      // POST
+      
       cy.request({
         method: 'POST',
-        url: 'https://api.escuelajs.co/api/v1/products/', 
+        url: `${apiUrl}`, 
         body: produto
       }).then((response) => {
         
@@ -23,13 +26,12 @@ describe('API Test Case 1 - Registration completed successfully', () => {
         expect(response.body.price).to.eq(produto.price);
         expect(response.body.description).to.eq(produto.description);
   
-        // Salve o ID do produto cadastrado
         const productId = response.body.id;
   
-        // GET
+        // Search for new product in product list from Id
         cy.request({
           method: 'GET',
-          url: 'https://api.escuelajs.co/api/v1/products', 
+          url: `${apiUrl}`, 
         }).then((getResponse) => {
           
           expect(getResponse.status).to.eq(200);

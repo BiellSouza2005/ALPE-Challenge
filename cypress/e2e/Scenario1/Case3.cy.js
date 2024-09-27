@@ -1,6 +1,7 @@
 describe('API Test Case 3 - Registration Failed (No product description and price)', () => {
 
     it('Register a product and verify that it was added correctly', () => {
+      const apiUrl = Cypress.env('apiUrl'); 
       
       const produto = {
         title: "Produto A",
@@ -11,7 +12,7 @@ describe('API Test Case 3 - Registration Failed (No product description and pric
       
       cy.request({
         method: 'POST',
-        url: 'https://api.escuelajs.co/api/v1/products/', 
+        url: `${apiUrl}`, 
         body: produto
       }).then((response) => {
         
@@ -26,7 +27,7 @@ describe('API Test Case 3 - Registration Failed (No product description and pric
         // Search for new product in product list from Id
         cy.request({
           method: 'GET',
-          url: 'https://api.escuelajs.co/api/v1/products', 
+          url: `${apiUrl}`, 
         }).then((getResponse) => {
           
           expect(getResponse.status).to.eq(200);

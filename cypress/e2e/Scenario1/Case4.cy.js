@@ -1,6 +1,7 @@
 describe('API Test Case 4 - Registration Failed (Price sent as string)', () => {
 
     it('Register a product and verify that it was added correctly', () => {
+      const apiUrl = Cypress.env('apiUrl'); 
       
       const produto = {
         title: "Produto A",
@@ -13,7 +14,7 @@ describe('API Test Case 4 - Registration Failed (Price sent as string)', () => {
       
       cy.request({
         method: 'POST',
-        url: 'https://api.escuelajs.co/api/v1/products/', 
+        url: `${apiUrl}`, 
         body: produto
       }).then((response) => {
         
@@ -28,7 +29,7 @@ describe('API Test Case 4 - Registration Failed (Price sent as string)', () => {
         // Search for new product in product list from Id
         cy.request({
           method: 'GET',
-          url: 'https://api.escuelajs.co/api/v1/products', 
+          url: `${apiUrl}`, 
         }).then((getResponse) => {
           
           expect(getResponse.status).to.eq(200);
