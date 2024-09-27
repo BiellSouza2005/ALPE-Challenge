@@ -1,4 +1,4 @@
-describe('API Test Case 1 - Registration completed successfully', () => {
+describe('API Test Case 3 - Registration Failed (No product description and price)', () => {
 
     it('Register a product and verify that it was added correctly', () => {
       
