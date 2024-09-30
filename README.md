@@ -1,7 +1,7 @@
 # ALPE-Challenge
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/BiellSouza2005/HangmanReact?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/BiellSouza2005/HangmanReact?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/BiellSouza2005/ALPE-Challenge?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/github/issues/BiellSouza2005/HangmanReact?style=for-the-badge)
 
 ## 💻 Pré-requisitos
