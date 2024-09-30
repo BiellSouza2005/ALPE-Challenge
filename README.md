@@ -18,8 +18,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 ## 📖 Guia do projeto
 
 Para entender melhor sobre o projeto, acesse primeiramente a pasta [doc](./doc) onde você pode encontrar:
-- ![Mapa Mental dos Cenários](./doc/MapaMental.jpg)
-- [Documento de Especificação dos Casos de Teste](./doc/EspecificacaoCasosTeste.pdf)
+- ![Mapa Mental dos Cenários](./doc/ALPE-Challenge.jpg)
+- [Documento de Especificação dos Casos de Teste](./doc/CASOS-DE-TESTE.pdf)
 
 ## 🚀 Instalando Projeto
 
