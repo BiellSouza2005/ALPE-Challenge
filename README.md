@@ -12,7 +12,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
   Caso não tenha o node instalado, <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-node-js-e-o-npm-no-windows/"> clique aqui</a>
 - Fazer instalação de um `<editor de código>`, como por exemplo o Visual Studio Code utilizado no projeto </br>
   Caso não tenha o Visual Studio Code instalado, <a href="https://code.visualstudio.com/download">clique aqui</a>
-- Fazer instalação do `<Git`> para clonar nosso repositório
+- Fazer instalação do `<Git`> para clonar nosso repositório </br>
   Caso não tenha o Git instalado, <a href="https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git">clique aqui</a>
 
 
