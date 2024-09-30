@@ -10,9 +10,16 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Fazer a instalação do `<NodeJS versão 20.9.0>` </br>
   Caso não tenha o node instalado, <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-node-js-e-o-npm-no-windows/"> clique aqui</a>
-- Fazer instalação de um `<editor de código>`, como por exemplo o Visual Studio Code utilizado no projeto
+- Fazer instalação de um `<editor de código>`, como por exemplo o Visual Studio Code utilizado no projeto </br>
+  Caso não tenhha o Visual Studio Code instalado, <a href="https://code.visualstudio.com/download">clique aqui</a>
 - Fazer instalação do `<Git`> para clonar nosso repositório
 - Você tem uma máquina `<Windows>`.
+
+## 📖 Guia do projeto
+
+Para entender melhor sobre o projeto, acesse primeiramente a pasta [doc](./doc) onde você pode encontrar:
+- ![Mapa Mental dos Cenários](./doc/MapaMental.jpg)
+- [Documento de Especificação dos Casos de Teste](./doc/EspecificacaoCasosTeste.pdf)
 
 ## 🚀 Instalando Projeto
 
