@@ -8,7 +8,7 @@
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Fazer a instalação do `<NodeJS versão 20.9.0>`
+- Fazer a instalação do `<NodeJS versão 20.9.0>` </br>
   Caso não tenha o node instalado: `https://www.freecodecamp.org/portuguese/news/como-instalar-o-node-js-e-o-npm-no-windows/`
 - Fazer instalação de um `<editor de código>`, como por exemplo o Visual Studio Code utilizado no projeto
 - Fazer instalação do `<Git`> para clonar nosso repositório
