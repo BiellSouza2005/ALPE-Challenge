@@ -46,6 +46,7 @@ describe('API Test Case 1 - Registration completed successfully', () => {
                 expect(produtoCadastrado.price).to.eq(produto.price);
                 expect(produtoCadastrado.description).to.eq(produto.description);
 
+                //Request a product change and check if it has been changed in the product list
                 cy.request({
                     method: 'PUT',
                     url: `${apiUrl}${productId}`,
@@ -68,14 +69,13 @@ describe('API Test Case 1 - Registration completed successfully', () => {
                         cy.log("Título alterado e verificado com sucesso: " + produtoAlterado.title);
                         //console.log(putResponse.body);  //Uncomment to view product
 
-                        // DELETE request to remove the product
+                        //Request to remove the product and to verify the product no longer exists
                         cy.request({
                             method: 'DELETE',
                             url: `${apiUrl}${productId}`
                         }).then((deleteResponse) => {
                             expect(deleteResponse.status).to.eq(200);
 
-                            // GET request to verify the product no longer exists
                             cy.request({
                                 method: 'GET',
                                 url: `${apiUrl}`,
