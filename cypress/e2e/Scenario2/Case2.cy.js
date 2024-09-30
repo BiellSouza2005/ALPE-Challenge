@@ -1,4 +1,4 @@
-describe('API Test Scenario 2 Case 1 - Reading product description', () => {
+describe('API Test Scenario 2 Case 2 - reading the product description only with " "', () => {
 
     it('Register a product and verify that it was added correctly', () => {
       const apiUrl = Cypress.env('apiUrl'); 
@@ -8,6 +8,7 @@ describe('API Test Scenario 2 Case 1 - Reading product description', () => {
       const produto = {
         title: "Produto A",
         price: 10,
+        description: " ",
         categoryId: 1,
         images: ["https://placeimg.com/640/480/any"]
       };
