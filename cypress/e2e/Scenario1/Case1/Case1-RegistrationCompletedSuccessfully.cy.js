@@ -1,4 +1,4 @@
-describe('API Test Scenario 1 Case 1 - Register multiple products from JSON', () => {
+describe('API Test Scenario 1 Case 1 - Registration Completed Successfully', () => {
 
   it('Registers multiple products and verifies that they were added correctly', () => {
     const apiUrl = Cypress.env('apiUrl'); 

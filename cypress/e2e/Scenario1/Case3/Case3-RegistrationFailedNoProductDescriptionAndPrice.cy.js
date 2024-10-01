@@ -1,10 +1,10 @@
-describe('API Test Scenario 1 Case 2 - Registration Failed No Product Description', () => {
+describe('API Test Case 3 - Registration Failed (No product description and price)', () => {
 
-  it('Register products and handle errors when description is missing', () => {
+  it('Register products and handle errors when description or price is missing', () => {
     const apiUrl = Cypress.env('apiUrl'); 
 
     
-    cy.fixture('Scenario1/Case2/products').then((products) => {
+    cy.fixture('Scenario1/Case3/products').then((products) => {
       const successfullyRegistered = []; 
       const failedProducts = []; 
       
@@ -28,7 +28,11 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
             
             cy.log(`Erro esperado no cadastro do produto "${product.title}": ${response.body.message}`);
             failedProducts.push(product); 
-            expect(response.body.message).to.include("description should not be empty");
+            expect(response.body.message).to.satisfy((msg) => 
+              msg.includes("description should not be empty") || 
+              msg.includes("price should not be empty") || 
+              (msg.includes("description should not be empty") && msg.includes("price should not be empty"))
+            );
 
             cy.log(`Erro no cadastro do produto "${product.title}" foi encontrado e tratado com sucesso`);
           } else {
