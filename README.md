@@ -40,7 +40,10 @@ Após ter instalado todas as dependências, execute o projeto com:
 ```
 npx cypress open
 ```
-Depois desse comando, acesse o cypress e teste os cenários.
+## 🔭Importante
+
+Sempre que for testar um caso em algum cenário, é importante fazer a limpeza dos dados com o arquivo <strong>DeletingProducts</strong></br>
+Depois desses comandos, acesse o cypress e teste os cenários.
 
 ## 🤝 Colaborador
 
