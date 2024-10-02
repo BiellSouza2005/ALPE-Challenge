@@ -1,6 +1,6 @@
-describe('API Test Scenario 2 Case 1 - Reading product description for Produto Z', () => {
+describe('API Test Scenario 2 Case 2 - Reading product description for Produto Z', () => {
 
-  it('Registers multiple products and verifies that only Produto Z was added correctly', () => {
+  it('Registers multiple products and verifies that they were added correctly', () => {
     const apiUrl = Cypress.env('apiUrl'); 
 
     // Insert all products and check if they were added correctly
