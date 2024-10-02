@@ -35,13 +35,13 @@ describe('API Test Scenario 2 Case 2 - Reading product description for Produto Z
       expect(getAllResponse.status).to.eq(200);
       
       cy.fixture('Scenario2/Case2/products.json').then((products) => {
-        const produtoZ = products.find(p => p.title === "Produto Z");
-        expect(produtoZ).to.not.be.undefined;
+        const productZ = products.find(p => p.title === "Produto Z");
+        expect(productZ).to.not.be.undefined;
 
         const productInList = getAllResponse.body.find(p => p.title === "Produto Z");
         expect(productInList).to.not.be.undefined;
 
-        expect(productInList.description).to.eq(produtoZ.description);
+        expect(productInList.description).to.eq(productZ.description);
         cy.log(`Descrição do Produto Z: ${productInList.description}`);
 
         const descriptionZ = productInList.description.trim();

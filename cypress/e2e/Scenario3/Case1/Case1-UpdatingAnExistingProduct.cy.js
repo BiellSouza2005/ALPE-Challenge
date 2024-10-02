@@ -26,13 +26,13 @@ describe('API Test Scenario 3 Case 1 - Updating an existing product', () => {
         url: `${apiUrl}`,
       }).then((getResponse) => {
         expect(getResponse.status).to.eq(200);
-        const produtoA = getResponse.body.find(p => p.title === "Produto A");
+        const productA = getResponse.body.find(p => p.title === "Produto A");
 
-        if (produtoA) {
+        if (productA) {
           cy.log('Produto A encontrado, iniciando atualização...');
           cy.request({
             method: 'PUT',
-            url: `${apiUrl}${produtoA.id}`,
+            url: `${apiUrl}${productA.id}`,
             body: {
               title: "Produto B"
             },
@@ -43,12 +43,12 @@ describe('API Test Scenario 3 Case 1 - Updating an existing product', () => {
               method: 'GET',
               url: `${apiUrl}`,
             }).then((newGetResponse) => {
-              const produtoAlterado = newGetResponse.body.find(p => p.id === produtoA.id);
+              const alteredProduct = newGetResponse.body.find(p => p.id === productA.id);
 
-              expect(produtoAlterado).to.not.be.undefined;
-              expect(produtoAlterado.title).to.eq("Produto B");
+              expect(alteredProduct).to.not.be.undefined;
+              expect(alteredProduct.title).to.eq("Produto B");
 
-              cy.log("Título de 'Produto A' alterado para: " + produtoAlterado.title);
+              cy.log("Título de 'Produto A' alterado para: " + alteredProduct.title);
             });
           });
         } else {
