@@ -1,0 +1,73 @@
+[
+    {
+      "title": "Produto A",
+      "price": -10,
+      "description": "Descrição do produto A",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto B",
+      "price": 20,
+      "description": "Descrição do produto B",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto C",
+      "price": 30,
+      "description": "Descrição do produto C",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto D",
+      "price": 40,
+      "description": "Descrição do produto D",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto E",
+      "price": 50,
+      "description": "Descrição do produto E",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto F",
+      "price": 60,
+      "description": "Descrição do produto F",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto G",
+      "price": 70,
+      "description": "Descrição do produto G",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto H",
+      "price": 80,
+      "description": "Descrição do produto H",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto I",
+      "price": 90,
+      "description": "Descrição do produto I",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto J",
+      "price": 100,
+      "description": "Descrição do produto J",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    }
+  ]
+  
