@@ -34,8 +34,12 @@ describe('API Test Scenario 2 Case 1 - Reading product description', () => {
         const productInList = getAllResponse.body.find(p => p.title === "Produto A");
         expect(productInList).to.not.be.undefined;
 
-        expect(productInList.description).to.eq(produtoA.description);
-        cy.log(`Descrição do Produto A: ${productInList.description}`);
+        if(expect(productInList.description).to.eq(produtoA.description)) 
+        {
+          cy.log(`Descrição do Produto A: ${productInList.description}`);
+          cy.log("Descrição visualizada com sucesso!")
+        }
+        
       });
     });
   });
