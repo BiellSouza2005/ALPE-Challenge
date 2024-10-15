@@ -5,7 +5,6 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
 
     
     cy.fixture('Scenario1/Case2/products').then((products) => {
-      //const successfullyRegistered = []; 
       const failedProducts = []; 
       
       
@@ -19,16 +18,13 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
           failOnStatusCode: false // So that it does not fail if the product is invalid
         }).then((response) => {
           
-        if (response.status === 400) {
+            expect(response.status).to.eq(400);
             
             cy.log(`Erro esperado no cadastro do produto "${product.title}": ${response.body.message}`);
             failedProducts.push(product); 
             expect(response.body.message).to.include("description should not be empty");
 
             cy.log(`Erro no cadastro do produto "${product.title}" foi encontrado e tratado com sucesso`);
-          } else {
-            throw new Error(`Ocorreu o cadastro do "${product.title}": ${response.status}`);
-          }
         });
       });
 
