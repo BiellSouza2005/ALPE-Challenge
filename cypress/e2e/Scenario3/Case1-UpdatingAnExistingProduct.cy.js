@@ -20,7 +20,7 @@ describe('API Test Scenario 3 Case 1 - Updating an existing product', () => {
         });
       });
 
-      // // After all products are added, take product A and swap it to product B and check
+      // After all products are added, take product A and swap it to product B and check
       cy.request({
         method: 'GET',
         url: `${apiUrl}`,
@@ -28,32 +28,33 @@ describe('API Test Scenario 3 Case 1 - Updating an existing product', () => {
         expect(getResponse.status).to.eq(200);
         const productA = getResponse.body.find(p => p.title === "Produto A");
 
-        if (productA) {
-          cy.log('Produto A encontrado, iniciando atualização...');
-          cy.request({
-            method: 'PUT',
-            url: `${apiUrl}${productA.id}`,
-            body: {
-              title: "Produto B"
-            },
-          }).then((putResponse) => {
-            expect(putResponse.status).to.eq(200);
-
-            cy.request({
-              method: 'GET',
-              url: `${apiUrl}`,
-            }).then((newGetResponse) => {
-              const alteredProduct = newGetResponse.body.find(p => p.id === productA.id);
-
-              expect(alteredProduct).to.not.be.undefined;
-              expect(alteredProduct.title).to.eq("Produto B");
-
-              cy.log("Título de 'Produto A' alterado para: " + alteredProduct.title);
-            });
-          });
-        } else {
+        if (!productA) {
           cy.log('Produto A não foi encontrado.');
+          return
         }
+         
+        cy.log('Produto A encontrado, iniciando atualização...');
+        cy.request({
+          method: 'PUT',
+          url: `${apiUrl}${productA.id}`,
+          body: {
+            title: "Produto B"
+          },
+        }).then((putResponse) => {
+          expect(putResponse.status).to.eq(200);
+
+          cy.request({
+            method: 'GET',
+            url: `${apiUrl}`,
+          }).then((newGetResponse) => {
+            const alteredProduct = newGetResponse.body.find(p => p.id === productA.id);
+
+            expect(alteredProduct).to.not.be.undefined;
+            expect(alteredProduct.title).to.eq("Produto B");
+
+            cy.log("Título de 'Produto A' alterado para: " + alteredProduct.title);
+          });
+        });
       });
     });
   });
