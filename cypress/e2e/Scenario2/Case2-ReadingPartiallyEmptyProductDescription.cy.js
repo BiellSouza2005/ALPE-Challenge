@@ -18,16 +18,12 @@ describe('API Test Scenario 2 Case 2 - Reading product description for Produto Z
 
           //If you want to test if all descriptions are OK
           const description = response.body.description.trim();
-          if (description === "") {
-            cy.log(`A descrição do produto "${product.title}" está vazia ou contém apenas espaços.`);
-          } else {
-            cy.log(`Descrição do produto "${product.title}" está OK: "${response.body.description}"`);
-          }
+          expect(description).to.eq("");
+          cy.log(`A descrição do produto "${product.title}" está vazia ou contém apenas espaços.`);
         });
       });
     });
 
-    //After activating all products, check the description of product Z
     cy.request({
       method: 'GET',
       url: `${apiUrl}`, 

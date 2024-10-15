@@ -19,7 +19,7 @@ describe('API Test Case 4 - Registration Failed (Price sent as string)', () => {
             method: 'POST',
             url: `${apiUrl}`,
             body: product,
-            failOnStatusCode: false // Para que o teste continue mesmo com erros
+            failOnStatusCode: false 
           }).then((response) => {
               if (response.status === 201) {
                 cy.log(`Produto "${product.title}" cadastrado com sucesso`);
