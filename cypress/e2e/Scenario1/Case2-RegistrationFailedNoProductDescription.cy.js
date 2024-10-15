@@ -5,7 +5,7 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
 
     
     cy.fixture('Scenario1/Case2/products').then((products) => {
-      const successfullyRegistered = []; 
+      //const successfullyRegistered = []; 
       const failedProducts = []; 
       
       
@@ -19,12 +19,7 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
           failOnStatusCode: false // So that it does not fail if the product is invalid
         }).then((response) => {
           
-          if (response.status === 201) {
-            
-            cy.log(`Produto "${product.title}" cadastrado com sucesso`);
-            successfullyRegistered.push(product); 
-
-          } else if (response.status === 400) {
+        if (response.status === 400) {
             
             cy.log(`Erro esperado no cadastro do produto "${product.title}": ${response.body.message}`);
             failedProducts.push(product); 
@@ -32,7 +27,7 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
 
             cy.log(`Erro no cadastro do produto "${product.title}" foi encontrado e tratado com sucesso`);
           } else {
-            throw new Error(`Erro inesperado ao cadastrar o produto "${product.title}": ${response.status}`);
+            throw new Error(`Ocorreu o cadastro do "${product.title}": ${response.status}`);
           }
         });
       });
@@ -44,14 +39,6 @@ describe('API Test Scenario 1 Case 2 - Registration Failed No Product Descriptio
         expect(getResponse.status).to.eq(200);
 
         const productsInAPI = getResponse.body;
-
-        
-        successfullyRegistered.forEach((product) => {
-          const productFound = productsInAPI.find(p => p.title === product.title);
-          expect(productFound).to.not.be.undefined;
-          cy.log(`Produto "${product.title}" encontrado na lista de produtos da API`);
-        });
-
        
         failedProducts.forEach((product) => {
           const productFound = productsInAPI.find(p => p.title === product.title);
