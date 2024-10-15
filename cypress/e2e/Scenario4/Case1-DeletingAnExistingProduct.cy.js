@@ -30,29 +30,29 @@ describe('API Test Scenario 4 Case 1 - Deleting an existing product', () => {
 
         const productB = getResponse.body.find(p => p.title === "Produto B");
 
-        if (productB) {
-          cy.log('Produto B encontrado, iniciando exclusão...');
+        if (!productB) {
+          cy.log('Produto B não foi encontrado.');
+          return
+        } 
+        
+        cy.log('Produto B encontrado, iniciando exclusão...');
+
+        cy.request({
+          method: 'DELETE',
+          url: `${apiUrl}${productB.id}`,
+        }).then((deleteResponse) => {
+          expect(deleteResponse.status).to.eq(200);
+          cy.log('Produto B deletado com sucesso!');
 
           cy.request({
-            method: 'DELETE',
-            url: `${apiUrl}${productB.id}`,
-          }).then((deleteResponse) => {
-            expect(deleteResponse.status).to.eq(200);
-            cy.log('Produto B deletado com sucesso!');
-
-            cy.request({
-              method: 'GET',
-              url: `${apiUrl}`,
-            }).then((newGetResponse) => {
-              const productDeleted = newGetResponse.body.find(p => p.id === productB.id);
-              expect(productDeleted).to.be.undefined;
-              cy.log('Confirmação: Produto B não está mais na lista.');
-            });
+            method: 'GET',
+            url: `${apiUrl}`,
+          }).then((newGetResponse) => {
+            const productDeleted = newGetResponse.body.find(p => p.id === productB.id);
+            expect(productDeleted).to.be.undefined;
+            cy.log('Confirmação: Produto B não está mais na lista.');
           });
-
-        } else {
-          cy.log('Produto B não foi encontrado.');
-        }
+        });
       });
     });
   });
