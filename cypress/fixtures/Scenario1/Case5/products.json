@@ -1,0 +1,73 @@
+[
+    {
+      "title": "Produto Z",
+      "price": "Preço do Produto Z",
+      "description": "Descrição do produto Z",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto B",
+      "price": "Preço do Produto B",
+      "description": "Descrição do produto B",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto C",
+      "price": "Preço do Produto C",
+      "description": "Descrição do produto C",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto D",
+      "price": "Preço do Produto D",
+      "description": "Descrição do produto D",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto E",
+      "price": "Preço do Produto E",
+      "description": "Descrição do produto E",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto F",
+      "price": "Preço do Produto F",
+      "description": "Descrição do produto F",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto G",
+      "price": "Preço do Produto G",
+      "description": "Descrição do produto G",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto H",
+      "price": "Preço do Produto H",
+      "description": "Descrição do produto H",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto I",
+      "price": "9Preço do Produto I",
+      "description": "Descrição do produto I",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    },
+    {
+      "title": "Produto J",
+      "price": "Preço do Produto J",
+      "description": "Descrição do produto J",
+      "categoryId": 1,
+      "images": ["https://placeimg.com/640/480/any"]
+    }
+  ]
+  
